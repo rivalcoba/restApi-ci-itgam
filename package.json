@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "NODE_ENV=development babel-watch ./src/bin/www",
-    "build:server" : "babel ./src --out-dir dist --copy-files"
+    "build:server": "babel ./src --out-dir dist --copy-files",
+    "lint": "eslint --ext .js ./src",
+    "lint:fix": "eslint --fix --ext .js ./src"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -19,9 +21,13 @@
   "devDependencies": {
     "@babel/cli": "^7.22.6",
     "@babel/core": "^7.22.8",
+    "@babel/eslint-parser": "^7.22.7",
     "@babel/node": "^7.22.6",
     "@babel/preset-env": "^7.22.7",
     "babel-watch": "^7.8.1",
-    "core-js": "^3.31.1"
+    "core-js": "^3.31.1",
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
   }
 }
