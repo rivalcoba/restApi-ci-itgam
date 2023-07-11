@@ -4,9 +4,11 @@
  * Module dependencies.
  */
 
-const debug = require('debug')('restapi-ci-itgam:server');
-const http = require('http');
-const app = require('../app');
+import Debug from 'debug';
+import http from 'http';
+import app from '../app';
+
+const debug = Debug('restapi-ci-itgam:server');
 
 /**
  * Normalize a port into a number, string, or false.
