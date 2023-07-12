@@ -5,8 +5,8 @@
  */
 
 import Debug from 'debug';
-import http from 'http';
-import app from '../app';
+import constants from '../config/constants';
+import Database from '../config/database';
 
 const debug = Debug('restapi-ci-itgam:server');
 
@@ -30,22 +30,8 @@ function normalizePort(val) {
   return false;
 }
 
-/**
- * Get port from environment and store in Express.
- */
-
-const port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
-
-/**
- * Create HTTP server.
- */
-
-const server = http.createServer(app);
-
-/**
- * Event listener for HTTP server "error" event.
- */
+// Get port from environment and store in Express.
+const port = normalizePort(constants.PORT);
 
 function onError(error) {
   if (error.syscall !== 'listen') {
@@ -69,20 +55,45 @@ function onError(error) {
   }
 }
 
-/**
- * Event listener for HTTP server "listening" event.
- */
+// Starting Server
+function startServer(dbConnection) {
+  import('../app').then((module) => {
+    // Importa el modulo por defecto
+    const app = module.default;
 
-function onListening() {
-  const addr = server.address();
-  const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
-  debug(`Listening on ${bind}`);
+    function onListening() {
+      const addr = app.address();
+      const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
+      debug(`Listening on ${bind}`);
+    }
+
+    app.set('port', port);
+
+    // Setting some events
+    app.on('error', onError);
+    app.on('listening', onListening);
+
+    // Store the dbConnection in the app
+    app.set('dbConnection', dbConnection);
+
+    // Listen on provided port, on all network interfaces.
+    app.listen(port);
+  });
 }
 
-/**
- * Listen on provided port, on all network interfaces.
- */
-
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+// IIFE
+(async () => {
+  // Creating the database instance
+  const database = new Database(constants.MONGO_URL);
+  try {
+    // Connecting to the database
+    const dbConnection = await database.connect();
+    if (dbConnection) {
+      debug(`🛢️ Conexión exitosa a la base de datos: ${constants.MONGO_URL} 🛢️`);
+    }
+    // Iniciando el servidor
+    startServer(dbConnection);
+  } catch (error) {
+    debug(`Error www.js ln 100: ${error.message}`);
+  }
+})();
