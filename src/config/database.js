@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import Debug from 'debug';
 
-const debug = Debug('restapi-ci-itgam:server');
+const debug = Debug('restapi-ci-itgam');
 
 class Database {
   constructor(connectionString) {
@@ -16,8 +16,8 @@ class Database {
       return this.connection;
     }
     try {
-      this.connection = await mongoose.connect(this.connectionString);
       debug(`📞📞 Conectando a la base de datos ...${this.connectionString}`);
+      this.connection = await mongoose.connect(this.connectionString);
       return this.connection;
     } catch (error) {
       debug(

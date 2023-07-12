@@ -8,7 +8,7 @@ import Debug from 'debug';
 import constants from '../config/constants';
 import Database from '../config/database';
 
-const debug = Debug('restapi-ci-itgam:server');
+const debug = Debug('restapi-ci-itgam');
 
 /**
  * Normalize a port into a number, string, or false.

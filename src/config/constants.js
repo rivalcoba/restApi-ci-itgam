@@ -16,6 +16,7 @@ const prodConfig = {
 
 const defaultConfig = {
   PORT: process.env.PORT || 3000,
+  ENV: process.env.NODE_ENV,
 };
 
 function envConfig(env) {
