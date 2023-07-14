@@ -1,10 +1,12 @@
-const express = require('express');
+import homeRouter from '../modules/home/home.route';
+import userRouter from '../modules/user/user.route';
 
-const router = express.Router();
+const addRoutes = (app) => {
+  // HOME
+  app.use('/', homeRouter);
 
-/* GET home page. */
-router.get('/', (req, res) => {
-  res.render('index', { title: 'ITGAM REST-API' });
-});
+  // USER
+  app.use('/api/v1/users', userRouter);
+};
 
-module.exports = router;
+export default { addRoutes };

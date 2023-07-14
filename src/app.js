@@ -3,16 +3,14 @@ import express from 'express';
 
 import middlewares from './config/middlewares';
 
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+import router from './routes';
 
 const app = express();
 
 // Appliying middlewares
 middlewares(app);
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+router.addRoutes(app);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
