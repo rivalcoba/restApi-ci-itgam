@@ -19,7 +19,7 @@ app.use((err, req, res, next) => {
   if (err instanceof ValidationError) {
     return res.status(err.statusCode).json(err);
   }
-  next(createError(404));
+  return next(createError(404));
 });
 
 // error handler
