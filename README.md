@@ -8,4 +8,4 @@ Gracias a [Icons8](https://icons8.com) por proveer el El [favicon](https://icons
 Proyecto basado en el articulo [building REST API with Nodejs / MongoDB /Passport /JWT](https://kris101.medium.com/building-rest-api-in-nodejs-mongodb-passport-jwt-6c557332d4ca)
 
 # TODO
-Register User
+Password Encryption and User Login
