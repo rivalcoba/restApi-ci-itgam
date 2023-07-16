@@ -1,4 +1,17 @@
 ![enter image description here](https://www.gamadero.tecnm.mx/assets/files/main/img/fondoblancoitgam.png)
+
+# REST API del Sistema de Administración de Recursos de la Biblioteca del ITGAM
+
+**ENCARGADO DE PROYECTO**
+
+JORGE IVAN RIVALCOVA RIVAS
+
+**Nombre de los desarrolladores**
+
+PAMELA RIOS GARCIA
+
+FABIOLA FRANCSICO OLMOS
+
 # OBJETIVOS
 ## GENERAL
 
