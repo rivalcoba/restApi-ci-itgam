@@ -1,5 +1,6 @@
 import createError from 'http-errors';
 import express from 'express';
+import { ValidationError } from 'express-validation';
 
 import middlewares from './config/middlewares';
 
@@ -13,7 +14,11 @@ middlewares(app);
 router.addRoutes(app);
 
 // catch 404 and forward to error handler
-app.use((req, res, next) => {
+app.use((err, req, res, next) => {
+  // Adding express validate error handler
+  if (err instanceof ValidationError) {
+    return res.status(err.statusCode).json(err);
+  }
   next(createError(404));
 });
 
