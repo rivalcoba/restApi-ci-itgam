@@ -2,11 +2,11 @@
 
 # REST API del Sistema de Administración de Recursos de la Biblioteca del ITGAM
 
-**ENCARGADO DE PROYECTO**
+## ENCARGADO DE PROYECTO
 
 JORGE IVAN RIVALCOVA RIVAS
 
-**Nombre de los desarrolladores**
+## Nombre de los desarrolladores
 
 PAMELA RIOS GARCIA
 
