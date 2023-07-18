@@ -2,15 +2,19 @@
 
 # REST API del Sistema de Administración de Recursos de la Biblioteca del ITGAM
 
-## ENCARGADO DE PROYECTO
 
-JORGE IVAN RIVALCOVA RIVAS
 
-## Nombre de los desarrolladores
+## LÌDER TÈCNICO
 
-PAMELA RIOS GARCIA
+![Alt text](lider.jpg)
 
-FABIOLA FRANCSICO OLMOS
+[JORGE IVAN RIVALCOBA RIVAS](https://github.com/rivalcoba/restApi-ci-itgam)
+
+## DESARROLLADORES BACKEND
+
+ [FABIOLA FRANCISCO OLMOS](https://github.com/Fabiolaolmos/crossfit-wod)
+
+[PAMELA RIOS GARCIA](https://github.com/PamRios)
 
 # OBJETIVOS
 ## GENERAL
