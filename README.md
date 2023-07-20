@@ -4,17 +4,21 @@
 
 
 
-## LÌDER TÈCNICO
-
-![Alt text](lider.jpg)
+![enter image description here](https://avatars.githubusercontent.com/u/3945886?v=4)
 
 [JORGE IVAN RIVALCOBA RIVAS](https://github.com/rivalcoba/restApi-ci-itgam)
 
 ## DESARROLLADORES BACKEND
 
- [FABIOLA FRANCISCO OLMOS](https://github.com/Fabiolaolmos/crossfit-wod)
+
+![enter image description here]( https://avatars.githubusercontent.com/u/124759381?v=4)
 
 [PAMELA RIOS GARCIA](https://github.com/PamRios)
+
+![enter image description here](https://avatars.githubusercontent.com/u/138613359?v=4)
+
+ [FABIOLA FRANCISCO OLMOS](https://github.com/Fabiolaolmos)
+
 
 # OBJETIVOS
 ## GENERAL
