@@ -2,23 +2,42 @@
 
 # REST API del Sistema de Administración de Recursos de la Biblioteca del ITGAM
 
+![enter image description here](https://www.gamadero.tecnm.mx/assets/files/main/img/fondoblancoitgam.png)
+
+# REST API un Sistema de Administración de los Recursos de la Biblioteca del ITGAM
+
+## Descripciòn del proyecto
+Este proyecto tiene como finalidad integrar nuevas herramientas de software para la administraciòn y resguardo de informaciòn que integra la biblioteca del Instituto Tecnologico de Gustavo. A. Madero.
+
+## Estado del proyecto
+ En Desarrollo
+
+## Tabla de contenido
+<a href="">1. USO</a>
+
+<a href="">2. DOCUMENTACIÒN</a>
+
+<a href="">3. EJEMPLOS</a>
+
+<a href="">4. CONTRIBUCIÒN</a>
+
+<a href="">5. AGRADECIMIENTOS</a>
+
+<a href="">6. LICENCIA</a>
+
+<a href="">7. CONTACTOS</a>
 
 
-![enter image description here](https://avatars.githubusercontent.com/u/3945886?v=4)
+## LÌDER TÈCNICO
 
-[JORGE IVAN RIVALCOBA RIVAS](https://github.com/rivalcoba/restApi-ci-itgam)
+![Alt text](lider.jpg)
+
 
 ## DESARROLLADORES BACKEND
 
-
-![enter image description here]( https://avatars.githubusercontent.com/u/124759381?v=4)
+ [FABIOLA FRANCISCO OLMOS](https://github.com/Fabiolaolmos/crossfit-wod)
 
 [PAMELA RIOS GARCIA](https://github.com/PamRios)
-
-![enter image description here](https://avatars.githubusercontent.com/u/138613359?v=4)
-
- [FABIOLA FRANCISCO OLMOS](https://github.com/Fabiolaolmos)
-
 
 # OBJETIVOS
 ## GENERAL
