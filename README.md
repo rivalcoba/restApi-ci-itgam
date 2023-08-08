@@ -52,7 +52,7 @@ PAMELA RIOS GARCIA</a>
    style="max-width:25%;
  border-radius:200%;
   height: autopx;
-  width:400;"   >
+  width:autox;">
 
 <a href="https://github.com/Fabiolaolmos"> FABIOLA FRANCISCO OLMOS</a>
 
