@@ -29,7 +29,7 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 
 
 <img src="https://avatars.githubusercontent.com/u/3945886?v=4"
- style="max-width:15%;
+ style="
  border-radius:200%;
   height: autopx;
   width:autopx;" >
