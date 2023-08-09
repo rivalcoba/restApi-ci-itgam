@@ -28,7 +28,7 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 
 
 <img src="https://avatars.githubusercontent.com/u/3945886?v=4"
- style="max-width:25%;
+ style="max-width:15%;
  border-radius:200%;
   height: autopx;
   width:autox;" >
@@ -39,7 +39,7 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 ### DESARROLLADORES BACKEND
 
 <img src="https://avatars.githubusercontent.com/u/124759381?v=4"
-  style="max-width:25%;
+  style="max-width:15%;
  border-radius:200%;
   height: autopx;
   width:autox;" >
@@ -90,6 +90,7 @@ y el manejo de los datos que componen el Centro de Información del Instituto Te
  border-radius: 300%;
   height: autopx;
   width:auto;" >
+
   <img src="img/whats.jpg"
   style="max-width:6%;
  border-radius: 300%;
