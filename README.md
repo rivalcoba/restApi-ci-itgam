@@ -88,7 +88,7 @@ y el manejo de los datos que componen el Centro de Información del Instituto Te
 ## Contacto<a name="Contacto"></a>
 
   <img src="img/whats.jpg"
-  style="max-width:6%;
+  style="max-width:3%;
  border-radius: 300%;
   height: autopx;
   width:auto;" >
