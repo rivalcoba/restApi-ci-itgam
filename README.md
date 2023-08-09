@@ -30,7 +30,8 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 <img src="https://avatars.githubusercontent.com/u/3945886?v=4"
 style="right" 
 width="120" 
-height="120" >
+height="120">
+
 
 
 <a  href="https://github.com/rivalcoba">JORGE IVAN RIVALCOBA RIVAS
@@ -82,9 +83,9 @@ y el manejo de los datos que componen el Centro de Información del Instituto Te
 
 
 ## Contacto<a name="Contacto"></a>
-<p>
-<img src="img/face.png"
-    style="max-width:6%;
+
+<img src="img/FACE.jpg"
+  style="max-width:6%;
  border-radius: 300%;
   height: autopx;
   width:auto;" >
@@ -94,8 +95,7 @@ y el manejo de los datos que componen el Centro de Información del Instituto Te
  border-radius: 300%;
   height: autopx;
   width:auto;" >
-  </p>
-   
+     
 
 
 
