@@ -1,6 +1,9 @@
+<p align="center">
 <img src="img/logo.PNG"
  style= "height:autopx;
-  width:800" />
+  width:800" 
+   />
+   </p>
 
 
 # REST API del Sistema de Administración de Recursos de la Biblioteca del ITGAM
@@ -83,12 +86,6 @@ y el manejo de los datos que componen el Centro de Información del Instituto Te
 
 
 ## Contacto<a name="Contacto"></a>
-
-<img src="img/FACE.jpg"
-  style="max-width:6%;
- border-radius: 300%;
-  height: autopx;
-  width:auto;" >
 
   <img src="img/whats.jpg"
   style="max-width:6%;
