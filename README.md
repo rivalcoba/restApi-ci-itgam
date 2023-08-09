@@ -27,12 +27,11 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 ## Desarrolladores <a name="Desarrolladores"></a>
 ### LÍDER
 
-
 <img src="https://avatars.githubusercontent.com/u/3945886?v=4"
- style="
- border-radius:200%;
-  height: autopx;
-  width:autopx;" >
+style="right" 
+width="120" 
+height="120" >
+
 
 <a  href="https://github.com/rivalcoba">JORGE IVAN RIVALCOBA RIVAS
   </a>
@@ -40,19 +39,17 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 ### DESARROLLADORES BACKEND
 
 <img src="https://avatars.githubusercontent.com/u/124759381?v=4"
-  style="max-width:15%;
- border-radius:200%;
-  height: autopx;
-  width:autopx;" >
+  style="right" width="120" height="120">
 
 
 <a href="https://github.com/PamRios">PAMELA RIOS GARCIA</a>
 
 <img src="https://avatars.githubusercontent.com/u/138613359?s=96&v=4"
-   style="max-width:25%;
- border-radius:200%;
-  height: autopx;
-  width:autopx;">
+   style="right" width="120" height="120"
+    >
+
+
+  
 
 <a href="https://github.com/Fabiolaolmos"> FABIOLA FRANCISCO OLMOS</a>
 
@@ -85,6 +82,7 @@ y el manejo de los datos que componen el Centro de Información del Instituto Te
 
 
 ## Contacto<a name="Contacto"></a>
+<p>
 <img src="img/face.png"
     style="max-width:6%;
  border-radius: 300%;
@@ -96,6 +94,7 @@ y el manejo de los datos que componen el Centro de Información del Instituto Te
  border-radius: 300%;
   height: autopx;
   width:auto;" >
+  </p>
    
 
 
