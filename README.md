@@ -1,6 +1,7 @@
 <img src="img/logo.PNG"
- style= "height: autopx;
-  width:autopx" />
+ style= "height:autopx;
+  width:800" />
+
 
 # REST API del Sistema de Administración de Recursos de la Biblioteca del ITGAM
 
@@ -31,7 +32,7 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
  style="max-width:15%;
  border-radius:200%;
   height: autopx;
-  width:autox;" >
+  width:autopx;" >
 
 <a  href="https://github.com/rivalcoba">JORGE IVAN RIVALCOBA RIVAS
   </a>
@@ -42,17 +43,16 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
   style="max-width:15%;
  border-radius:200%;
   height: autopx;
-  width:autox;" >
+  width:autopx;" >
 
-<a href="https://github.com/PamRios">
 
-PAMELA RIOS GARCIA</a>
+<a href="https://github.com/PamRios">PAMELA RIOS GARCIA</a>
 
 <img src="https://avatars.githubusercontent.com/u/138613359?s=96&v=4"
    style="max-width:25%;
  border-radius:200%;
   height: autopx;
-  width:autox;">
+  width:autopx;">
 
 <a href="https://github.com/Fabiolaolmos"> FABIOLA FRANCISCO OLMOS</a>
 
@@ -86,7 +86,7 @@ y el manejo de los datos que componen el Centro de Información del Instituto Te
 
 ## Contacto<a name="Contacto"></a>
 <img src="img/face.png"
-  style="max-width:6%;
+    style="max-width:6%;
  border-radius: 300%;
   height: autopx;
   width:auto;" >
