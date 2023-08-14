@@ -1,5 +1,5 @@
 <p align="center">
-<img src="img/logo.PNG"
+<img src="img/itgam-banner.jpg"
  style= "height:autopx;
   width:800" 
    />
@@ -18,8 +18,8 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 # Tabla de contenido
 1. [Desarrolladores](#Desarrolladores)
 2. [Objetivos](#Objetivos)
-    1. [General](#General)
-    2. [Especifico](#Especifico)
+    a. [General](#General)
+    b. [Especifico](#Especifico)
 4. [Uso](#Uso)
 5. [Ejemplos](#Ejemplo)
 6. [Contribución](#Contribucion)
@@ -29,9 +29,15 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 
 ## Desarrolladores <a name="Desarrolladores"></a>
 ### Tech Lead
-![TechLead](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/3945886?v=4&h=100&w=100&fit=cover&mask=circle&maxage=7d)  
 
-<a href="https://github.com/rivalcoba">JORGE IVAN RIVALCOBA RIVAS</a>
+<img src="https://avatars.githubusercontent.com/u/3945886?v=4"
+style="max-width:4%;
+ border-radius: 100%;
+  height: 30px;
+  width:40px;" >
+     
+<a  href="https://github.com/rivalcoba">JORGE IVAN RIVALCOBA RIVAS
+  </a>
 
 ### Backend Dev
 
@@ -87,13 +93,17 @@ y el manejo de los datos que componen el Centro de Información del Instituto Te
 
 ## Contacto<a name="Contacto"></a>
 
-  <img src="img/whats.jpg"
+  <img src="img/WhatsApp.jpg"
   style="max-width:3%;
  border-radius: 100%;
   height: 15px;
+  width:20px;" >  
+<img src="img/Facebook.jpg"
+  style="max-width:3%;
+ border-radius: 100%;
+  height: 10px;
   width:20px;" >
      
-
 
 
 
