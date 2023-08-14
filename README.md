@@ -29,6 +29,9 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 
 ## Desarrolladores <a name="Desarrolladores"></a>
 ### Tech Lead
+<div style="border-radius: 100%; width:100px;">
+</div>
+![TechLead](https://avatars.githubusercontent.com/u/3945886?v=4)
 
 <img src="https://avatars.githubusercontent.com/u/3945886?v=4"
 style="border-radius: 100%; width:100px;" >
