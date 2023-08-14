@@ -28,7 +28,7 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 9. [Contacto](#Contacto)
 
 ## Desarrolladores <a name="Desarrolladores"></a>
-### LÍDER
+### Tech Lead
 
 <img src="https://avatars.githubusercontent.com/u/3945886?v=4"
 style="right" 
@@ -40,7 +40,7 @@ height="120">
 <a  href="https://github.com/rivalcoba">JORGE IVAN RIVALCOBA RIVAS
   </a>
 
-### DESARROLLADORES BACKEND
+### Backend Dev
 
 <img src="https://avatars.githubusercontent.com/u/124759381?v=4"
   style="right" width="120" height="120">
@@ -90,8 +90,8 @@ y el manejo de los datos que componen el Centro de Información del Instituto Te
   <img src="img/whats.jpg"
   style="max-width:3%;
  border-radius: 300%;
-  height: autopx;
-  width:auto;" >
+  height: 15px;
+  width:20px;" >
      
 
 
