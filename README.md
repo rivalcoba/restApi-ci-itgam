@@ -31,10 +31,10 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 ### Tech Lead
 
 <img src="https://avatars.githubusercontent.com/u/3945886?v=4"
-style="max-width:3%;
+style="max-width:4%;
  border-radius: 100%;
-  height: 20px;
-  width:50px;" >
+  height: 30px;
+  width:40px;" >
      
 
 
@@ -45,20 +45,20 @@ style="max-width:3%;
 ### Backend Dev
 
 <img src="https://avatars.githubusercontent.com/u/124759381?v=4"
-style="max-width:3%;
+style="max-width:4%;
  border-radius: 100%;
-  height: 20px;
-  width:50px;" >
+  height: 30px;
+  width:40px;" >
      
 
 
 <a href="https://github.com/PamRios">PAMELA RIOS GARCIA</a>
 
 <img src="https://avatars.githubusercontent.com/u/138613359?s=96&v=4"
-style="max-width:3%;
+style="max-width:4%;
  border-radius: 100%;
-  height: 20px;
-  width:50px;" >
+  height: 30px;
+  width:40px;" >
      
 
 
