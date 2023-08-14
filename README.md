@@ -29,18 +29,9 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 
 ## Desarrolladores <a name="Desarrolladores"></a>
 ### Tech Lead
-<div style="border-radius: 100%; width:100px;">
-</div>
-![TechLead](https://avatars.githubusercontent.com/u/3945886?v=4)
+![TechLead](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/3945886?v=4&h=100&w=100&fit=cover&mask=circle&maxage=7d)  
 
-<img src="https://avatars.githubusercontent.com/u/3945886?v=4"
-style="border-radius: 100%; width:100px;" >
-     
-
-
-
-<a  href="https://github.com/rivalcoba">JORGE IVAN RIVALCOBA RIVAS
-  </a>
+<a href="https://github.com/rivalcoba">JORGE IVAN RIVALCOBA RIVAS</a>
 
 ### Backend Dev
 
