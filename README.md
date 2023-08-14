@@ -31,10 +31,7 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 ### Tech Lead
 
 <img src="https://avatars.githubusercontent.com/u/3945886?v=4"
-style="max-width:4%;
- border-radius: 100%;
-  height: 30px;
-  width:40px;" >
+style="border-radius: 100%; width:100px;" >
      
 
 
