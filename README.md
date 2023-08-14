@@ -31,9 +31,11 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 ### Tech Lead
 
 <img src="https://avatars.githubusercontent.com/u/3945886?v=4"
-style="right" 
-width="120" 
-height="120">
+style="max-width:3%;
+ border-radius: 100%;
+  height: 20px;
+  width:50px;" >
+     
 
 
 
@@ -43,14 +45,21 @@ height="120">
 ### Backend Dev
 
 <img src="https://avatars.githubusercontent.com/u/124759381?v=4"
-  style="right" width="120" height="120">
+style="max-width:3%;
+ border-radius: 100%;
+  height: 20px;
+  width:50px;" >
+     
 
 
 <a href="https://github.com/PamRios">PAMELA RIOS GARCIA</a>
 
 <img src="https://avatars.githubusercontent.com/u/138613359?s=96&v=4"
-   style="right" width="120" height="120"
-    >
+style="max-width:3%;
+ border-radius: 100%;
+  height: 20px;
+  width:50px;" >
+     
 
 
   
@@ -89,7 +98,7 @@ y el manejo de los datos que componen el Centro de Información del Instituto Te
 
   <img src="img/whats.jpg"
   style="max-width:3%;
- border-radius: 300%;
+ border-radius: 100%;
   height: 15px;
   width:20px;" >
      
