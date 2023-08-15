@@ -18,8 +18,10 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 # Tabla de contenido
 1. [Desarrolladores](#Desarrolladores)
 2. [Objetivos](#Objetivos)
-    a. [General](#General)
-    b. [Especifico](#Especifico)
+
+    a [General](#General)
+    
+    b [Especifico](#Especifico)
 4. [Uso](#Uso)
 5. [Ejemplos](#Ejemplo)
 6. [Contribución](#Contribucion)
