@@ -30,38 +30,25 @@ Este proyecto tiene como finalidad integrar nuevas herramientas de software para
 ## Desarrolladores <a name="Desarrolladores"></a>
 ### Tech Lead
 
-<img src="https://avatars.githubusercontent.com/u/3945886?v=4"
-style="max-width:4%;
- border-radius: 100%;
-  height: 30px;
-  width:40px;" >
-     
-<a  href="https://github.com/rivalcoba">JORGE IVAN RIVALCOBA RIVAS
-  </a>
+![TechLead](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/3945886?v=4&h=100&w=100&fit=cover&mask=circle&maxage=7d)  
+
+<a href="https://github.com/rivalcoba">JORGE IVAN RIVALCOBA RIVAS</a>
 
 ### Backend Dev
 
-<img src="https://avatars.githubusercontent.com/u/124759381?v=4"
-style="max-width:4%;
- border-radius: 100%;
-  height: 30px;
-  width:40px;" >
-     
 
+![Backend Dev](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/124759381?v=4=100&w=100&fit=cover&mask=circle&maxage=7d)  
 
 <a href="https://github.com/PamRios">PAMELA RIOS GARCIA</a>
 
-<img src="https://avatars.githubusercontent.com/u/138613359?s=96&v=4"
-style="max-width:4%;
- border-radius: 100%;
-  height: 30px;
-  width:40px;" >
+
      
-
-
-  
+![Backend Dev](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/138613359?s=96&v=4=100&w=100&fit=cover&mask=circle&maxage=7d)  
 
 <a href="https://github.com/Fabiolaolmos"> FABIOLA FRANCISCO OLMOS</a>
+
+
+     
 
 ## Objetivos<a name="Objetivos"></a>
 
