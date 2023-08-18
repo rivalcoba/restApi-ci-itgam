@@ -1,5 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 import validator from 'validator';
+// Importando bcrypt
+import bcrypt from 'bcrypt';
 /*
 import {
   passwordReg
@@ -49,6 +51,26 @@ const UserSchema = new Schema({
       message: '{VALUE} is not a valid password!',
     },
   },
+});
+
+// Methods
+UserSchema.methods = {
+  // Encripta el password
+  hashPassword(password) {
+    return bcrypt.hashSync(password);
+  },
+  authenticateUser(password) {
+    return bcrypt.compareSync(password, this.password);
+  },
+};
+
+// Hooks
+// eslint-disable-next-line prefer-arrow-callback
+UserSchema.pre('next', function (next) {
+  if (this.isModified('password')) {
+    this.password = '';
+  }
+  return next();
 });
 
 export default mongoose.model('User', UserSchema);

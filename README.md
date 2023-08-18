@@ -11,5 +11,6 @@ Proyecto basado en:
 * Video [Create a NodeJS + MongoDB Rest API](https://www.youtube.com/watch?v=UL66bwInJHY&list=PLzQWIQOqeUSMzMUEJA0XrOxJbX8WTiCJV)
 
 # TODO
-Password Encryption and User Login
+Modifying the model
+Pendiente: src/modules/v1/user/user.model.js en linea 69
 Por instalar https://www.npmjs.com/package/bcrypt
