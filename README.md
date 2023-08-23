@@ -1,5 +1,5 @@
 <p align="center">
-<img src="img/itgam-banner.jpg"
+<img src="public/img/itgam-banner.jpg"
  style= "height:autopx;
   width:800" 
    />
@@ -82,12 +82,12 @@ y el manejo de los datos que componen el Centro de Información del Instituto Te
 
 ## Contacto<a name="Contacto"></a>
 
-  <img src="img/WhatsApp.jpg"
+  <img src="public/img/WhatsApp.jpg"
   style="max-width:3%;
  border-radius: 100%;
   height: 15px;
   width:20px;" >  
-<img src="img/Facebook.jpg"
+<img src="public/img/Facebook.jpg"
   style="max-width:3%;
  border-radius: 100%;
   height: 10px;
