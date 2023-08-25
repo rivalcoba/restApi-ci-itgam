@@ -2,11 +2,11 @@ import mongoose, { Schema } from 'mongoose';
 import validator from 'validator';
 // Importando bcrypt
 import bcrypt from 'bcrypt';
-/*
+// Importando el REGEX del Password
 import {
-  passwordReg
-} from './user.validations';
-*/
+  passwordRegNoSecure // For secure password use "passwordReg"
+} from './user.validation';
+
 const UserSchema = new Schema({
   email: {
     type: String,
@@ -45,8 +45,7 @@ const UserSchema = new Schema({
     minlength: [6, 'Password need to be longer'],
     validate: {
       validator(password) {
-        // TODO: return passwordReg.test(password);
-        return password !== '';
+        return passwordRegNoSecure.test(password);
       },
       message: '{VALUE} is not a valid password!',
     },
@@ -66,9 +65,9 @@ UserSchema.methods = {
 
 // Hooks
 // eslint-disable-next-line prefer-arrow-callback
-UserSchema.pre('next', function (next) {
+UserSchema.pre('save', function cb(next) {
   if (this.isModified('password')) {
-    this.password = '';
+    this.password = this.hashPassword(this.password);
   }
   return next();
 });
