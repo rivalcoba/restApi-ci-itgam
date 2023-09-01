@@ -4,7 +4,7 @@ import validator from 'validator';
 import bcrypt from 'bcrypt';
 // Importando el REGEX del Password
 import {
-  passwordRegNoSecure // For secure password use "passwordReg"
+  passwordReg, // TODO: For secure password use "passwordReg"
 } from './user.validation';
 
 const UserSchema = new Schema({
@@ -45,7 +45,7 @@ const UserSchema = new Schema({
     minlength: [6, 'Password need to be longer'],
     validate: {
       validator(password) {
-        return passwordRegNoSecure.test(password);
+        return passwordReg.test(password);
       },
       message: '{VALUE} is not a valid password!',
     },
