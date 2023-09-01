@@ -56,7 +56,7 @@ const UserSchema = new Schema({
 UserSchema.methods = {
   // Encripta el password
   hashPassword(password) {
-    return bcrypt.hashSync(password);
+    return bcrypt.hashSync(password, 10);
   },
   authenticateUser(password) {
     return bcrypt.compareSync(password, this.password);

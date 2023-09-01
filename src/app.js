@@ -14,17 +14,16 @@ middlewares(app);
 router.addRoutes(app);
 
 // catch 404 and forward to error handler
-app.use((err, req, res, next) => {
-  // Adding express validate error handler
-  if (err instanceof ValidationError) {
-    return res.status(err.statusCode).json(err);
-  }
-  return next(createError(404));
+app.use(function (req, res, next) {
+  next(createError(404, `404 Pagina no encontrada ${req.method} ${req.originalUrl}`));
 });
 
 // error handler
 app.use((err, req, res) => {
-  // set locals, only providing error in development
+  // Adding express validate error handler
+  if (err instanceof ValidationError) {
+    return res.status(err.statusCode).json(err);
+  }
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
