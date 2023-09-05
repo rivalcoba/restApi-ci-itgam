@@ -7,6 +7,7 @@ import Debug from 'debug';
 import express from 'express';
 import helmet from 'helmet';
 import compression from 'compression';
+import passport from 'passport';
 
 import constants from './constants';
 
@@ -20,6 +21,8 @@ export default (app) => {
   app.use(express.urlencoded({ extended: false }));
   app.use(cookieParser());
   app.use(express.static(path.join(__dirname, '..', '..', 'public')));
+  app.use(passport.initialize());
+
   // Development Middlewares
   if (constants.ENV === 'development') {
     const debug = Debug('restapi-ci-itgam');

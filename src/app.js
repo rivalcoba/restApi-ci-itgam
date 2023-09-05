@@ -14,7 +14,7 @@ middlewares(app);
 router.addRoutes(app);
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
   next(createError(404, `404 Pagina no encontrada ${req.method} ${req.originalUrl}`));
 });
 
@@ -29,7 +29,7 @@ app.use((err, req, res) => {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  return res.render('error');
 });
 
 export default app;
