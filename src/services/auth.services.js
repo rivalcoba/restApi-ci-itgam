@@ -28,6 +28,7 @@ const localStrategy = new LocalStrategy(
 // Strategy selection
 passport.use(localStrategy);
 
+// Create a Middleware for authentication
 export const authLocal = passport.authenticate('local', {
   session: false,
 });

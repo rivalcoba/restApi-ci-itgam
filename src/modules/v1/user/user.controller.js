@@ -10,6 +10,11 @@ export async function signUp(req, res) {
   }
 }
 
+// POST /api/v1/users/login
+export function login(req, res) {
+  res.status(200).json(req.user);
+}
+
 export function test() {
   return 'test user';
 }
