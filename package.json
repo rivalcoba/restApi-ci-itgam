@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./src/bin/www.js"
+    "start": "node ./dist/bin/www.js",
+    "dev": "NODE_ENV=development babel-watch --watch -- ./src/bin/www.js ./src/views",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && babel ./src --out-dir dist --copy-files"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,5 +16,12 @@
     "http-errors": "~1.6.3",
     "install": "^0.13.0",
     "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.11",
+    "@babel/node": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "babel-watch": "^7.8.1"
   }
 }
