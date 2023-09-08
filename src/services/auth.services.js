@@ -39,7 +39,8 @@ const jwtOptions = {
 const jwtStrategy = new JWTStrategy(jwtOptions, async (payload, done) => {
   try {
     // Identify User by ID
-    const user = await User.findById(payload.uid);
+    // eslint-disable-next-line
+    const user = await User.findById(payload._id);
     if (!user) {
       return done(null, false);
     }

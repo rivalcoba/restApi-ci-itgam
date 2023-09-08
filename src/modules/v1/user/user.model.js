@@ -3,10 +3,10 @@ import validator from 'validator';
 // Importando bcrypt
 import bcrypt from 'bcrypt';
 // JWT
+import jwt from 'jsonwebtoken';
+import constants from '../../../config/constants';
 // Importando el REGEX del Password
-import {
-  passwordReg,
-} from './user.validation';
+import { passwordReg } from './user.validation';
 
 const UserSchema = new Schema({
   email: {
@@ -63,7 +63,18 @@ UserSchema.methods = {
     return bcrypt.compareSync(password, this.password);
   },
   createToken() {
-    return '';
+    // Payload, JWT secret
+    // eslint-disable-next-line
+    return jwt.sign({ _id: this._id }, constants.JWT_SECRET);
+  },
+  toJSON() {
+    return {
+      // eslint-disable-next-line
+      _id: this._id,
+      userName: this.userName,
+      // Passport requires the word "JWT" append to the JWT
+      token: `JWT ${this.createToken()}`,
+    };
   },
 };
 
