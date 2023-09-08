@@ -6,6 +6,7 @@ dotenv.config();
 
 const devConfig = {
   MONGO_URL: process.env.MONGO_URL_DEV,
+  JWT_SECRET: process.env.JWT_SECRET,
 };
 const testConfig = {
   MONGO_URL: process.env.MONGO_URL_TEST,
