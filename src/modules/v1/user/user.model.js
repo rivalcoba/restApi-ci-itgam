@@ -2,9 +2,10 @@ import mongoose, { Schema } from 'mongoose';
 import validator from 'validator';
 // Importando bcrypt
 import bcrypt from 'bcrypt';
+// JWT
 // Importando el REGEX del Password
 import {
-  passwordReg, // TODO: For secure password use "passwordReg"
+  passwordReg,
 } from './user.validation';
 
 const UserSchema = new Schema({
@@ -60,6 +61,9 @@ UserSchema.methods = {
   },
   authenticateUser(password) {
     return bcrypt.compareSync(password, this.password);
+  },
+  createToken() {
+    return '';
   },
 };
 

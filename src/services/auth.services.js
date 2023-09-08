@@ -1,14 +1,19 @@
 import passport from 'passport';
+// Strategies
 import LocalStrategy from 'passport-local';
+import { Strategy as JWTStrategy, ExtractJwt } from 'passport-jwt';
 import User from '../modules/v1/user/user.model';
 
+// Env
+import constants from '../config/constants';
+
 // Options object for local strategy
-const localOpts = {
+const localOptions = {
   usernameField: 'email',
 };
 
 const localStrategy = new LocalStrategy(
-  localOpts,
+  localOptions,
   async (email, password, done) => {
     try {
       const user = await User.findOne({ email });
@@ -25,12 +30,34 @@ const localStrategy = new LocalStrategy(
   },
 );
 
-// Strategy selection
-passport.use(localStrategy);
+// Optios Object for JWT Strategy
+const jwtOptions = {
+  jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme('authorization'),
+  secretOrKey: constants.JWT_SECRET,
+};
 
-// Create a Middleware for authentication
-export const authLocal = passport.authenticate('local', {
-  session: false,
+const jwtStrategy = new JWTStrategy(jwtOptions, async (payload, done) => {
+  try {
+    // Identify User by ID
+    const user = await User.findById(payload.uid);
+    if (!user) {
+      return done(null, false);
+    }
+    return done(null, user);
+  } catch (error) {
+    return done(error, false);
+  }
 });
 
-export const authJWT = { msg: 'not implemented' };
+// Strategy registration
+passport.use(localStrategy);
+passport.use(jwtStrategy);
+
+// Disabling sessions
+const sessionType = {
+  session: false,
+};
+
+// Create a Middlewares for authentication
+export const authLocal = passport.authenticate('local', sessionType);
+export const authJWT = passport.authenticate('jwt', sessionType);
