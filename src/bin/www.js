@@ -7,6 +7,7 @@
 import Debug from 'debug';
 import http from 'http';
 import app from '../app';
+import constants from '../config/constants';
 
 const debug = Debug('restapi-ci-itgam:server');
 
