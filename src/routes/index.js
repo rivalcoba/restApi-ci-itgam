@@ -7,4 +7,4 @@ router.get('/', (req, res) => {
   res.render('index', { title: 'ITGAM REST-API' });
 });
 
-module.exports = router;
+export default router;
