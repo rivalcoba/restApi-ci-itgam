@@ -11,4 +11,4 @@ Proyecto basado en:
 * Video [Create a NodeJS + MongoDB Rest API](https://www.youtube.com/watch?v=UL66bwInJHY&list=PLzQWIQOqeUSMzMUEJA0XrOxJbX8WTiCJV)
 
 # TODO
-Making a Post by User and Object Association (Not started)
+Creating Post Controller (Not started)
