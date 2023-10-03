@@ -32,6 +32,12 @@ const localStrategy = new LocalStrategy(
 
 // Optios Object for JWT Strategy
 const jwtOptions = {
+  /*
+  En este caso "authorization" es el nombre
+  que debera llevar el campo "Token Prefix"
+  en la peticion con Thunder Client en la opcion
+  Bearer, el token que va ahi es sin la palabra JWT
+  */
   jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme('authorization'),
   secretOrKey: constants.JWT_SECRET,
 };
