@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+import constants from '../config/constants';
 /**
  * Module dependencies.
  */
@@ -8,11 +8,14 @@ var app = require('../app');
 var debug = require('debug')('restapi-ci-itgam:server');
 var http = require('http');
 
+
+
+
 /**
  * Get port from environment and store in Express.
  */
-
-var port = normalizePort(process.env.PORT || '3000');
+//cambiamos en esta parte
+var port = normalizePort(constants.port);
 app.set('port', port);
 
 /**
