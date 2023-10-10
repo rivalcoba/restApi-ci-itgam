@@ -1,23 +1,16 @@
 import createError from 'http-errors';
 import express from 'express';
-import path from 'path';
-import cookieParser from 'cookie-parser';
-import logger from 'morgan';
+
+// Midlwares
+import middlewares from './config/middlewares';
 
 import indexRouter from './routes/index';
 import usersRouter from './routes/users';
 
 const app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
-
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '..', 'public')));
+// Setting up middlewares
+middlewares(app);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

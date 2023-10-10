@@ -9,7 +9,7 @@ import http from 'http';
 import app from '../app';
 import constants from '../config/constants';
 
-const debug = Debug('restapi-ci-itgam:server');
+const debug = Debug('restapi-ci-itgam');
 
 /**
  * Normalize a port into a number, string, or false.
