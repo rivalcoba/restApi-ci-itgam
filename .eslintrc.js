@@ -5,15 +5,13 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['airbnb'],
+  extends: ['airbnb', 'prettier'],
   overrides: [
     {
       env: {
         node: true,
       },
-      files: [
-        '.eslintrc.{js,cjs}',
-      ],
+      files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
         sourceType: 'script',
       },
@@ -25,5 +23,7 @@ module.exports = {
   },
   rules: {
     'no-console': 'off',
+    'prettier/prettier': ['error'],
   },
+  plugins: ['prettier'],
 };
