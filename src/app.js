@@ -15,7 +15,12 @@ router.addRoutes(app);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
-  next(createError(404, `404 Pagina no encontrada ${req.method} ${req.originalUrl}`));
+  next(
+    createError(
+      404,
+      `404 Pagina no encontrada ${req.method} ${req.originalUrl}`,
+    ),
+  );
 });
 
 // error handler
