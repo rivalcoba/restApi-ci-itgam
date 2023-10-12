@@ -1,8 +1,9 @@
 import { Joi } from 'express-validation';
 // Reglas del password en Regex
-export const passwordReg = process.env.NODE_ENV === 'development'
-  ? /^.{6}$/
-  : /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+export const passwordReg =
+  process.env.NODE_ENV === 'development'
+    ? /^.{6}$/
+    : /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
 // export const passwordRegNoSecure = /^.{6}$/;
 
 // Exportando reglas de validacion
