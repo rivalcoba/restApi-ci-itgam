@@ -1,13 +1,13 @@
 // Project dependencies
 import path from 'path';
 import cookieParser from 'cookie-parser';
-import logger from 'morgan';
-import Debug from 'debug';
+import morgan from 'morgan';
 
 // Production Only Depenencies
 import express from 'express';
 import helmet from 'helmet';
 import compression from 'compression';
+import logger from './winston';
 
 import constants from './constants';
 
@@ -24,16 +24,15 @@ export default (app) => {
   // Static Server
   app.use(express.static(path.join(__dirname, '..', '..', 'public')));
 
-  const debug = Debug('restapi-ci-itgam');
-  app.use(logger('dev'));
+  app.use(morgan('dev', { stream: logger.stream }));
 
   // Development Middlewares
   if (constants.ENV === 'development') {
-    debug('📢 EXCECUTION MODE: 🛠 DEVELOPMENT 🛠');
+    logger.info('EXCECUTION MODE: 🛠 DEVELOPMENT 🛠');
   }
   // Production Middlewares
   if (constants.ENV === 'production') {
-    debug('📢 EXCECUTION MODE: 🏭 PRODUCTION 🏭');
+    logger.info('EXCECUTION MODE: 🏭 PRODUCTION 🏭');
     app.use(compression());
     app.use(helmet());
   }

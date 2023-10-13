@@ -4,12 +4,10 @@
  * Module dependencies.
  */
 
-import Debug from 'debug';
 import http from 'http';
 import app from '../app';
 import constants from '../config/constants';
-
-const debug = Debug('restapi-ci-itgam');
+import logger from '../config/winston';
 
 /**
  * Normalize a port into a number, string, or false.
@@ -58,11 +56,11 @@ function onError(error) {
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
-      debug(`${bind} requires elevated privileges`);
+      logger.error(`${bind} requires elevated privileges`);
       process.exit(1);
       break;
     case 'EADDRINUSE':
-      debug(`${bind} is already in use`);
+      logger.error(`${bind} is already in use`);
       process.exit(1);
       break;
     default:
@@ -77,7 +75,7 @@ function onError(error) {
 function onListening() {
   const addr = server.address();
   const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
-  debug(`Listening on ${bind}`);
+  logger.info(`Listening on ${bind}`);
 }
 
 /**
