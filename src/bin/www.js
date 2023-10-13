@@ -1,19 +1,21 @@
 #!/usr/bin/env node
-
+import constants from '../config/constants';
 /**
  * Module dependencies.
  */
 
-const app = require('../app');
-const debug = require('debug')('restapi-ci-itgam:server');
-const http = require('http');
+var app = require('../app');
+var debug = require('debug')('restapi-ci-itgam:server');
+var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+
+
 
 /**
  * Create HTTP server.
