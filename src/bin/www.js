@@ -4,9 +4,11 @@
  * Module dependencies.
  */
 
-const app = require('../app');
-const debug = require('debug')('restapi-ci-itgam:server');
-const http = require('http');
+import app from '../app';
+import debug from 'debug';
+import http from 'http';
+
+const debug = debug('restapi-ci-itgam:server');
 
 /**
  * Get port from environment and store in Express.
@@ -15,17 +17,18 @@ const http = require('http');
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
+
 /**
  * Create HTTP server.
  */
 
-const server = http.createServer(app);
+const server = http.createServer(app); 
 
 /**
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+server.listen(port); 
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -33,7 +36,7 @@ server.on('listening', onListening);
  * Normalize a port into a number, string, or false.
  */
 
-function normalizePort(val) {
+function normalizePort(val) { 
   const port = parseInt(val, 10);
 
   if (isNaN(port)) {
