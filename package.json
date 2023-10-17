@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./dist/bin/www.js",
-    "dev": "NODE_ENV=development babel-watch --watch ./src/views ./src/bin/www.js ",
+    "dev": "NODE_ENV=development DEBUG=restapi-ci-itgam babel-watch --watch ./src/views ./src/bin/www.js ",
     "clean": "rm -rf ./dist",
     "build": "npm run clean && babel ./src --out-dir dist --copy-files",
     "lint": "eslint ./src/**/*.js",

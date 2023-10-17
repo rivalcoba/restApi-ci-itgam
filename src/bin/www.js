@@ -7,7 +7,7 @@ import Debug from 'debug';
 import http from 'http';
 import app from '../app';
 
-const debug = Debug('restapi-ci-itgam:server');
+const debug = Debug('restapi-ci-itgam');
 
 /**
  * Create HTTP server.
