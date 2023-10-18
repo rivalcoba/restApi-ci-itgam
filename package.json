@@ -9,7 +9,7 @@
     "lint": "eslint --ext .js ./src",
     "lint:fix": "eslint --fix --ext .js ./src",
     "clean": "rm -rf ./dist",
-    "clean:logs" : "rm -rf ./logs/*.log"
+    "clean:logs": "rm -rf ./logs/*.log"
   },
   "dependencies": {
     "app-root-path": "^3.1.0",
@@ -22,6 +22,7 @@
     "helmet": "^7.0.0",
     "http-errors": "~1.6.3",
     "install": "^0.13.0",
+    "mongoose": "^7.6.3",
     "morgan": "~1.9.1",
     "winston": "^3.11.0"
   },

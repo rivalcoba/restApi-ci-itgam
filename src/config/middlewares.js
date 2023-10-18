@@ -2,6 +2,7 @@
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
+import mongoose from 'mongoose';
 
 // Production Only Depenencies
 import express from 'express';
@@ -36,6 +37,16 @@ export default (app) => {
     app.use(compression());
     app.use(helmet());
   }
+
+  // Checking databse connection middleware
+  app.use((req, res, next) => {
+    if (mongoose.connection.readyState === 1) {
+      logger.info('✅ Pass database 🛢 connection checking');
+      next();
+    } else {
+      res.status(503).json({ message: 'App out of service' });
+    }
+  });
 
   return app;
 };
