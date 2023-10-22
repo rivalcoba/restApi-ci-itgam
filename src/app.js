@@ -2,10 +2,15 @@ import createError from 'http-errors';
 import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
-import logger from 'morgan';
+import morgan from 'morgan';
+
+import log from './config/winston';
 
 import indexRouter from './routes/index';
 import usersRouter from './routes/users';
+
+// eslint-disable-next-line no-underscore-dangle
+global.__rootdir = path.resolve(process.cwd());
 
 const app = express();
 
@@ -14,7 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.set('view engine', 'hbs');
 
-app.use(logger('dev'));
+app.use(morgan('dev', { stream: log.stream }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
