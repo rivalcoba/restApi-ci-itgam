@@ -30,6 +30,7 @@ app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
+  log.info(`404 pagina no encontrada ${req.method} ${req.originalUrl}`);
   next(createError(404));
 });
 
@@ -41,6 +42,7 @@ app.use((err, req, res) => {
 
   // render the error page
   res.status(err.status || 500);
+  log.error(`${err.status || 500} - ${err.message}`);
   res.render('error');
 });
 

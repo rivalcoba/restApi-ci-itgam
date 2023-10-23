@@ -3,16 +3,14 @@
 /**
  * Module dependencies.
  */
-import Debug from 'debug';
 import http from 'http';
 import app from '../app';
-
-const debug = Debug('restapi-ci-itgam');
+import log from '../config/winston';
 
 /**
  * Create HTTP server.
  */
-
+log.info('El servidor se crea a travez de la instancia express');
 const server = http.createServer(app);
 
 /**
@@ -56,11 +54,11 @@ function onError(error) {
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
-      console.error(`${bind} requires elevated privileges`);
+      log.error(`${bind} requires elevated privileges`);
       process.exit(1);
       break;
     case 'EADDRINUSE':
-      console.error(`${bind} is already in use`);
+      log.error(`${bind} is already in use`);
       process.exit(1);
       break;
     default:
@@ -74,8 +72,8 @@ function onError(error) {
 
 function onListening() {
   const addr = server.address();
-  const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
-  debug(`Listening on ${bind}`);
+  log.info(`Listening on ${process.env.APP_URL}:${addr.port} `);
+  // APP_URL almacena información como URL, claves secretas
 }
 
 /**
