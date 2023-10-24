@@ -6,6 +6,9 @@ import logger from 'morgan';
 import helmet from 'helmet';
 import compression from 'compression';
 
+/* TODO: Obtener el modo dejeción de el objeto exportado por 
+  constants.js
+*/
 const devEnviroment = process.env.NODE_ENV === 'development';
 const prodEnviroment = process.env.NODE_ENV === 'production';
 
