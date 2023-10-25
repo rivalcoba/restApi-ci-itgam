@@ -4,7 +4,6 @@ import path from 'path';
 
 const { combine, timestamp, label, printf, colorize, prettyPrint } = format;
 // level : label : timestamp : message
-
 // eslint-disable-next-line no-underscore-dangle
 global.__rootdir = path.resolve(process.cwd());
 
@@ -44,8 +43,7 @@ const myFileFormat = combine(
 const options = {
   infoFile: {
     level: 'info',
-    // eslint-disable-next-line no-undef
-    filename: `${__rootdir}/src/logs/info.log`,
+    filename: `${__rootdir}/logs/info.log`,
     handleExceptions: false,
     maxSize: 5242880, // 5MB
     maxFiles: 5,
@@ -53,8 +51,7 @@ const options = {
   },
   warnFile: {
     level: 'warn',
-    // eslint-disable-next-line no-undef
-    filename: `${__rootdir}/src/logs/warn.log`,
+    filename: `${__rootdir}/logs/warn.log`,
     handleExceptions: false,
     maxSize: 5242880, // 5MB
     maxFiles: 5,
@@ -62,8 +59,7 @@ const options = {
   },
   errorFile: {
     level: 'error',
-    // eslint-disable-next-line no-undef
-    filename: `${__rootdir}/src/logs/error.log`,
+    filename: `${__rootdir}/logs/error.log`,
     handleExceptions: false,
     maxSize: 5242880, // 5MB
     maxFiles: 5,
