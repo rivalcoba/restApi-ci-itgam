@@ -5,7 +5,11 @@
  */
 import http from 'http';
 import app from '../app';
+import constants from '../config/constants';
 import log from '../config/winston';
+
+// 👁TODO: MARCA ERROR POR QUE AUN NO HAS IMPLEMENTADO LA FUNCIONALIDAD 👁
+import connectWithRetry from '../database/mongooseConnection';
 
 /**
  * Create HTTP server.
@@ -75,6 +79,9 @@ function onListening() {
   log.info(`Listening on ${process.env.APP_URL}:${addr.port} `);
   // APP_URL almacena información como URL, claves secretas
 }
+
+// 👁TODO: MARCA ERROR POR QUE AUN NO HAS IMPLEMENTADO LA FUNCIONALIDAD 👁
+connectWithRetry(constants.MONGO_URL);
 
 /**
  * Listen on provided port, on all network interfaces.
