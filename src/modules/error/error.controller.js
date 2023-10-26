@@ -1,7 +1,6 @@
-import createError from 'http-errors';
-
 export function error404(req, res, next) {
-  next(createError(404));
+  // next(createError(404));
+  res.render('error/e404View');
 }
 
 // eslint-disable-next-line
