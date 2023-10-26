@@ -10,7 +10,10 @@ const devConfig = {
 const testConfig = { MONGO_URL: process.env.MONGO_URL_TEST };
 const prodConfig = { MONGO_URL: process.env.MONGO_URL_PROD };
 
-const defaultConfig = { PORT: process.env.PORT || 3000 };
+const defaultConfig = {
+  PORT: process.env.PORT || 3000,
+  ENV: process.env.NODE_ENV,
+};
 function envConfig(env) {
   switch (env) {
     case 'development':
@@ -23,6 +26,5 @@ function envConfig(env) {
 }
 export default {
   ...defaultConfig,
-
   ...envConfig(process.env.NODE_ENV),
 };
