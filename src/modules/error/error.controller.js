@@ -1,4 +1,4 @@
-export function error404(req, res, next) {
+export function error404(req, res) {
   // next(createError(404));
   res.render('error/e404View');
 }
