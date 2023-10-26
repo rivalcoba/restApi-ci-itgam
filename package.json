@@ -8,9 +8,11 @@
     "clean": "rm -rf ./dist",
     "build": "npm run clean && babel ./src --out-dir dist --copy-files",
     "lint": "eslint ./src/**/*.js",
-    "lint:fix": "eslint . --ext .js --fix"
+    "lint:fix": "eslint . --ext .js --fix",
+    "clean:logs": "rm -rf ./src/logs/*.log"
   },
   "dependencies": {
+    "app-root-path": "^3.1.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^16.3.1",
@@ -19,7 +21,8 @@
     "http-errors": "~1.6.3",
     "install": "^0.13.0",
     "mongoose": "^7.5.2",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.10",

@@ -5,6 +5,9 @@ module.exports = {
     es2021: true,
     node: true,
   },
+  globals: {
+    __rootdir: 'readonly', // agrego para reconocer la ruta raiz
+  },
   extends: ['airbnb-base', 'prettier'],
   overrides: [
     {
