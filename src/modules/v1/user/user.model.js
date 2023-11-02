@@ -67,13 +67,17 @@ UserSchema.methods = {
     // eslint-disable-next-line
     return jwt.sign({ _id: this._id }, constants.JWT_SECRET);
   },
-  toJSON() {
+  toAuthJSON() {
     return {
-      // eslint-disable-next-line
       _id: this._id,
       userName: this.userName,
-      // Passport requires the word "JWT" append to the JWT
       token: `JWT ${this.createToken()}`,
+    };
+  },
+  toJSON() {
+    return {
+      _id: this._id,
+      userName: this.userName,
     };
   },
 };
