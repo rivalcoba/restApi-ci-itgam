@@ -12,10 +12,7 @@ export default (app) => {
   app.use('/', homeRouter);
 
   // catch 404 and forward to error handler
-  app.use((req, res, next) => {
-    next(error404);
-  });
-
+  app.use(error404);
   // error handler
   app.use(generalError);
 };
