@@ -7,6 +7,9 @@ import postValidations from './post.validations';
 
 const postRouter = new Router();
 
+// GET /api/v1/posts/<id>
+postRouter.get('/:id', postController.getPostById);
+
 // POST /api/v1/posts
 postRouter.post(
   '/',

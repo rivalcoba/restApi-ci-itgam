@@ -13,4 +13,4 @@ Proyecto basado en:
 * [Repo](https://github.com/0xairdropfarmer/nodejs-restapi)
 
 # TODO
-Adding HTTP status library to Controller (In progress)
+Getting User data in Post response (TODO)
