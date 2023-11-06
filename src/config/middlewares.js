@@ -3,6 +3,7 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
+import httpStatus from 'http-status';
 
 // Production Only Depenencies
 import express from 'express';
@@ -44,7 +45,9 @@ export default (app) => {
       logger.info('✅ Pass database 🛢 connection checking');
       next();
     } else {
-      res.status(503).json({ message: 'App out of service' });
+      res
+        .status(httpStatus.SERVICE_UNAVAILABLE)
+        .json({ message: 'App out of service' });
     }
   });
 
