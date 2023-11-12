@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "app-root-path": "^3.1.0",
+    "bcrypt-nodejs": "^0.0.3",
     "compression": "^1.7.4",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -23,8 +24,11 @@
     "http-errors": "~1.6.3",
     "http-status": "^1.7.3",
     "install": "^0.13.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.6.3",
+    "mongoose-unique-validator": "^4.0.0",
     "morgan": "~1.9.1",
+    "validator": "^13.11.0",
     "winston": "^3.11.0"
   },
   "devDependencies": {
