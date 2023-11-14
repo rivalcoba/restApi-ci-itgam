@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import helmet from 'helmet';
 import compression from 'compression';
+import mongoose from 'mongoose';
 
 /* TODO: Obtener el modo dejeción de el objeto exportado por 
   constants.js
@@ -28,4 +29,14 @@ export default (app) => {
   app.use(express.urlencoded({ extended: false }));
   app.use(cookieParser());
   app.use(express.static('public'));
+
+  // Conexión con la base de datos
+  app.use((req, res, next) => {
+    if (mongoose.connection.readyState === 1) {
+      logger.info('Conexión a la base establecida');
+      next();
+    } else {
+      res.status(503).json({ message: 'Service unavailable' });
+    }
+  });
 };
