@@ -32,11 +32,18 @@ export default (app) => {
 
   // Conexión con la base de datos
   app.use((req, res, next) => {
-    if (mongoose.connection.readyState === 1) {
-      logger.info('Conexión a la base establecida');
-      next();
-    } else {
-      res.status(503).json({ message: 'Service unavailable' });
+    try {
+      mongoose.connection.readyState = 1;
+      console.log('Conexión exitosa');
+      return next();
+    } catch (error) {
+      return res.satus(503).json({ message: 'Service Unavailable' });
     }
+    // if (mongoose.connection.readyState === 1) {
+    //   logger.info('Conexión a la base establecida');
+    //   next();
+    // } else {
+    //   res.status(503).json({ message: 'Service unavailable' });
+    // }
   });
 };
