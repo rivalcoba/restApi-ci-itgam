@@ -6,18 +6,18 @@ import helmet from 'helmet';
 import compression from 'compression';
 import mongoose from 'mongoose';
 import log from './winston';
+import constants from './constants';
 
 /* TODO: Obtener el modo dejeción de el objeto exportado por 
   constants.js
 */
-const devEnviroment = process.env.NODE_ENV === 'development';
-const prodEnviroment = process.env.NODE_ENV === 'production';
+const modeEnviroment = constants.ENV;
 
 export default (app) => {
-  if (devEnviroment) {
+  if (modeEnviroment === 'development') {
     console.log('📢 EXCECUTION MODE: 🛠 DEVELOPMENT 🛠');
   }
-  if (prodEnviroment) {
+  if (modeEnviroment === 'production') {
     app.use(compression());
     app.use(helmet());
     console.log('📢 EXCECUTION MODE: 🏭 PRODUCTION 🏭');

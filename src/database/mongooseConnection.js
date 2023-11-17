@@ -11,3 +11,4 @@ export default async function connectionToDatabase(mongodbURL) {
     setTimeout(() => connectionToDatabase(mongodbURL), 20000);
   }
 }
+clear
