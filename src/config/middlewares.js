@@ -33,7 +33,7 @@ export default (app) => {
 
   // Conexión con la base de datos
   app.use((req, res, next) => {
-    if (mongoose.connection.readyState) {
+    if (mongoose.connection.readyState === 1) {
       log.info('✔ Conexión a la base establecida ✨');
       next();
     } else {
