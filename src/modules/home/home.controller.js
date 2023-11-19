@@ -1,8 +1,8 @@
-const index = (req, res) => {
-  res.render('index', {
+const homeView = (req, res) => {
+  res.render('home/homeView.hbs', {
     title: 'El archivo hom funcionando',
   });
 };
 export default {
-  index,
+  homeView,
 };
