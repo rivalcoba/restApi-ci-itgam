@@ -23,6 +23,7 @@
     "hbs": "^4.2.0",
     "helmet": "^7.0.0",
     "http-errors": "~1.6.3",
+    "http-status": "^1.7.3",
     "install": "^0.13.0",
     "mongoose": "^7.5.2",
     "morgan": "~1.9.1",
