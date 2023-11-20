@@ -4,7 +4,7 @@ import httpStatus from 'http-status';
 export function test(_, res) {
   res.status(httpStatus.OK).json({
     result: 'ok',
-    message: 'Test Passed!! from users entry point',
+    message: 'Este es la principal entrada del usuario',
   });
 }
 
