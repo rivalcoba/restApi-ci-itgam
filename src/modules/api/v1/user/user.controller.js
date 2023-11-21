@@ -4,14 +4,14 @@ import httpStatus from 'http-status';
 export function test(_, res) {
   res.status(httpStatus.OK).json({
     result: 'ok',
-    message: 'Test Passed!! from users entry point',
+    message: 'Este es la principal entrada del usuario',
   });
 }
 
-// Delete this function
-export function foo(req, res) {
+// GET /api/v1/users
+export function getUser(req, res) {
   res.status(httpStatus.OK).json({
     result: 'ok',
-    message: 'create function',
+    message: 'get users',
   });
 }
