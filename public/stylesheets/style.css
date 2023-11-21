@@ -1,8 +1,72 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+h1 {
+  color: rgb(23, 0, 128);
+  text-align: center;
+  
 }
 
-a {
-  color: #00B7FF;
+p {
+  color: rgb(60, 25, 212);
+  text-align: center;
+  
 }
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2E86C1 ;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Este color pertenece al momento se seleccionar */
+li a:hover {
+  background-color: #7a848b ;
+}
+
+
+.active {
+  background-color: #4CAF50;
+}
+
+/* Propiedades de Imagenes */
+
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+div.iconos {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: right;
+  width: 50px;
+}
+
+
+
+footer {
+  background-color: #2E86C1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  color: white;
+}
+
