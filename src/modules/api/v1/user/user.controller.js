@@ -8,10 +8,10 @@ export function test(_, res) {
   });
 }
 
-// Delete this function
-export function foo(req, res) {
+// GET /api/v1/users
+export function getUser(req, res) {
   res.status(httpStatus.OK).json({
     result: 'ok',
-    message: 'create function',
+    message: 'get users',
   });
 }

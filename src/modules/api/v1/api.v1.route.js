@@ -1,9 +1,10 @@
 import { Router } from 'express';
-// Importamos el controlador del suario
-import * as userController from './user/user.controller';
+// importando el enrutador user
+import userRouter from './user/user.route';
 
-const router = new Router();
-// Declaramos /users/test para la ruta base del usuario
-router.get('/users/test', userController.test);
+const apiV1router = new Router();
 
-export default router;
+// Declaramos /users para la ruta base del usuario
+apiV1router.use('/users', userRouter);
+
+export default apiV1router;
