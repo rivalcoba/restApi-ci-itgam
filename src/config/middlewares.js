@@ -8,7 +8,7 @@ import mongoose from 'mongoose';
 import log from './winston';
 import constants from './constants';
 
-/* TODO: Obtener el modo dejeción de el objeto exportado por 
+/* Obteniendo modo de ejecución de el objeto exportado por 
   constants.js
 */
 const modeEnviroment = constants.ENV;

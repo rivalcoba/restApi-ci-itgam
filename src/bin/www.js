@@ -8,7 +8,7 @@ import app from '../app';
 import constants from '../config/constants';
 import log from '../config/winston';
 
-// 👁TODO: MARCA ERROR POR QUE AUN NO HAS IMPLEMENTADO LA FUNCIONALIDAD 👁
+// Importando funcion para conexión a la Base de Datos
 import connectWithRetry from '../database/mongooseConnection';
 
 /**
@@ -80,7 +80,7 @@ function onListening() {
   // APP_URL almacena información como URL, claves secretas
 }
 
-// 👁TODO: MARCA ERROR POR QUE AUN NO HAS IMPLEMENTADO LA FUNCIONALIDAD 👁
+// Aplicando funcion para conexión a la Base de Datos
 connectWithRetry(constants.MONGO_URL);
 
 /**
