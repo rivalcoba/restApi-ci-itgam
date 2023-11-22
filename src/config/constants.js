@@ -19,6 +19,10 @@ const prodConfig = {
 const defaultConfig = {
   PORT: process.env.PORT || 3000,
   ENV: process.env.NODE_ENV,
+  SMTP_HOST: process.env.SMTP_HOST,
+  SMPT_PORT: process.env.SMPT_PORT,
+  MAIL_USER: process.env.MAIL_USER,
+  MAIL_PASSWORD: process.env.MAIL_PASSWORD,
 };
 
 function envConfig(env) {

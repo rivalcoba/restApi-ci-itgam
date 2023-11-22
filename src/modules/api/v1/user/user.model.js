@@ -3,7 +3,11 @@ import mongoose, { Schema } from 'mongoose';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import uniqueValidator from 'mongoose-unique-validator';
+import { log } from 'handlebars';
 import * as userValidator from './user.validators';
+// Mail sender services
+import MailSender from '../../../../services/mailSender';
+import constants from '../../../../config/constants';
 
 // Creating Schema
 const UserSchema = new Schema(
@@ -142,8 +146,54 @@ UserSchema.post('updateOne', (error, res, next) => {
   return next();
 });
 
-UserSchema.post('save', (error, res, next) => {
-  // TODO: Send email confirmation
+UserSchema.post('save', async () => {
+  // Creating Mail Options Objects
+  const options = {
+    host: constants.SMTP_HOST,
+    port: constants.SMTP_PORT,
+    secure: false,
+    auth: {
+      user: constants.MAIL_USER,
+      pass: constants.MAIL_PASSWORD,
+    },
+  };
+
+  const mailSender = new MailSender(options);
+
+  // Configuring Mail data
+  mailSender.mail = {
+    from: 'jorge.rr@gamadero.tecnm.mx',
+    to: this.email,
+    subject: 'Email Confirmation',
+  };
+
+  // ViewModel
+  const viewModel = {
+    name: this.firstName,
+    middleName: this.middleName,
+    email: this.email,
+    token: this.emailConfirmationToken,
+  };
+
+  const textMail = `
+  Estimado ${this.firstName} ${this.middleName} favor de confirmar su cuenta
+  en el siguiente enlace: ${this.emailConfirmationToken}
+  `;
+
+  // Sending Mail
+  try {
+    const result = await mailSender.sendMail(
+      'confirmation',
+      viewModel,
+      textMail
+    );
+    if (!result) log.error('Error sending mail');
+    log.info('Mail sent successfully');
+    return result;
+  } catch (error) {
+    log.error(error);
+    return null;
+  }
 });
 
 // Creating and exporting User model
