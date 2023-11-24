@@ -15,12 +15,3 @@ export function getUser(req, res) {
     message: 'get users',
   });
 }
-
-// GeT /api/vi/book.model
-
-export function getBook(req, res) {
-  res.status(httpStatus.OK).json({
-    result: 'ok',
-    message: 'get Book',
-  });
-}
