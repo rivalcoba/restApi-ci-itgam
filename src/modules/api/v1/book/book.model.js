@@ -1,46 +1,53 @@
 import mongoose, { Schema } from 'mongoose';
-import Isbn from './book.validators';
+import isISBN from 'isbn3';
 
 const BookSchema = new Schema({
-  numberacquisition: {
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+  acquisition: {
     type: String,
     unique: true,
-    required: [true, 'Numero de Adquisición es necesario'],
+    required: [true, 'Acquisition number is necessary'],
     trim: true,
   },
-  namebook: {
+  title: {
     type: String,
-    required: [true, 'Nombre de Libro es necesario'],
+    required: [true, 'Book Name is required'],
     trim: true,
   },
-  nameauthor: {
+  author: {
     type: String,
-    required: [true, 'Nombre Author es necesario'],
+    required: [true, 'Author name is required'],
     trim: true,
   },
   editorial: {
     type: String,
-    required: [true, 'Editorial es necesario'],
+    required: [true, 'Editorial is necessary'],
     trim: true,
   },
-  Classification: {
+  classification: {
     type: String,
     unique: true,
-    required: [true, 'Clasificación es necesario'],
+    required: [true, 'Classification is necessary'],
     trim: true,
   },
   isbn: {
     type: String,
     unique: true,
-    required: [true, 'ISBN es necesario'],
+    required: [true, 'ISBN is required'],
     trim: true,
-    minlength: [13, 'ISBN debe tener al menos 13 caracteres'],
-    maxlength: [13, 'ISBN no puede tener más de 13 caracteres'],
-    validate: {
-      validator(isbn) {
-        return Isbn.test(isbn);
+    isbn: {
+      type: String,
+      required: true,
+      validate: {
+        validator(isbn) {
+          // Utilizamos  la función isISBN para validar con isbn3
+          return isISBN(isbn);
+        },
+        message: 'The ISBN provided is not valid..',
       },
-      message: '{VALUE La ISBN no es valido',
     },
   },
 });
