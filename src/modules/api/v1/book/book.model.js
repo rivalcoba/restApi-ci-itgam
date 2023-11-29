@@ -3,12 +3,30 @@ import isISBN from 'isbn3';
 
 const BookSchema = new Schema(
   {
+    // Numero de ejemplar
+    numberCopie: {
+      type: Number,
+      required: [true, 'NumberCopie is necessary'],
+      trim: true,
+    },
     acquisition: {
       type: String,
       unique: true,
       required: [true, 'Acquisition number is necessary'],
       trim: true,
     },
+    // Donaciíón , Compra
+    acquisitionTypes: {
+      type: [
+        {
+          type: String,
+          enum: ['donations', 'purchase'],
+          default: ['purchase'],
+        },
+      ],
+      default: ['purchase'],
+    },
+
     title: {
       type: String,
       required: [true, 'Book Name is required'],
