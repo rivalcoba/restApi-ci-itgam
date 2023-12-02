@@ -1,17 +1,10 @@
 import mongoose, { Schema } from 'mongoose';
 import isISBN from 'isbn3';
-
+// Crear un documento
 const BookSchema = new Schema(
   {
-    // Numero de ejemplar
-    numberCopie: {
-      type: Number,
-      required: [true, 'NumberCopie is necessary'],
-      trim: true,
-    },
     acquisition: {
       type: String,
-      unique: true,
       required: [true, 'Acquisition number is necessary'],
       trim: true,
     },
@@ -37,14 +30,13 @@ const BookSchema = new Schema(
       required: [true, 'Author name is required'],
       trim: true,
     },
-    editorial: {
+    publishert: {
       type: String,
       required: [true, 'Editorial is necessary'],
       trim: true,
     },
     classification: {
       type: String,
-      unique: true,
       required: [true, 'Classification is necessary'],
       trim: true,
     },
@@ -68,6 +60,8 @@ const BookSchema = new Schema(
   },
   {
     timestamps: true,
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
   },
 );
 

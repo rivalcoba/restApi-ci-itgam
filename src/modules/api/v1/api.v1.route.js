@@ -1,9 +1,18 @@
 import { Router } from 'express';
-// importando el enrutador user
-import userRouter from './user/user.route';
+// Importamos el controlador del suario
+import * as userController from './user/user.controller';
+import * as bookController from './book/book.controller';
 
-const apiV1router = new Router();
+const router = new Router();
+// Declaramos /users/test para la ruta base del usuario
+router.get('/users/test', userController.test);
+// Registra los datos
+router.post('/book/record', bookController.record);
+// Busca por id
+router.get('/book/getOneBook', bookController.getOneBook);
+// // Manda a llamar todos los datos que contiene el libro
+router.get('/book/getallBook', bookController.getallBook);
+// Actualizando libro por id
+router.patch('/book/updateOneBook', bookController.updateOneBook);
 
-// Declaramos /users para la ruta base del usuario
-apiV1router.use('/users', userRouter);
-export default apiV1router;
+export default router;
